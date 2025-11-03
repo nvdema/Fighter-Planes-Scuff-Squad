@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
 
     private float horizontalScreenLimit = 9.5f;
     private float verticalScreenLimit = 3.5f;
-    private float lowerverticalScreenLimit = -3.5f;
 
     public GameObject bulletPrefab;
 
@@ -56,12 +55,7 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x * -1, transform.position.y, 0);
         }
-       
-        //Player ATTEMPTS to leave the screen through the Top
-        if (transform.position.y > verticalScreenLimit)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y - 0.02f);
-        }
+        
         //Bottom half of screen code
         float bottomLimit = -verticalScreenLimit;
         float topLimit = 0;
